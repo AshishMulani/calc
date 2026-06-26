@@ -1,4 +1,4 @@
 FROM python3:latest
-RUN mkdir /script
-COPY add.py /script/
-CMD [ "python", "script/add.py" ]
+WORKDIR /script
+COPY add.py .
+CMD [ "python", "add.py" ]
